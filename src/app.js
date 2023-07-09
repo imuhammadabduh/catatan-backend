@@ -6,7 +6,7 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({ origin: "*", credentials: false }));
 app.use(morgan(morganLogger));
 app.use(express.json());
 
