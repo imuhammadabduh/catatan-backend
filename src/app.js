@@ -6,8 +6,8 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors("*"));
-app.use(morgan(morganLogger))
+app.use(cors({ origin: "*", credentials: true }));
+app.use(morgan(morganLogger));
 app.use(express.json());
 
 app.use("/api/auth", require("./routers/authRouter"));
