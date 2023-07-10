@@ -12,9 +12,7 @@ app.use(express.json());
 
 app.use("/api/auth", require("./routers/authRouter"));
 app.use("/api/notes", require("./routers/notesRouter"));
-app.all("*",(req ,res) => {
-    res.json("hello world")
-})
+
 app.use(middlewareErrorHandler);
 
 module.exports = app;
